@@ -5,9 +5,9 @@ public class NetworkFlow {
 
     // BFS를 사용하여 경로를 찾는 함수
     private static boolean bfs(int[][] capacity, int[][] flow, int source, int sink, int[] parent) {
-        int n = capacity.length;
-        boolean[] visited = new boolean[n];
-        Queue<Integer> queue = new LinkedList<>();
+        int n = capacity.length;    
+        boolean[] visited = new boolean[n];     
+        Queue<Integer> queue = new LinkedList<>(); 
         
         queue.add(source);
         visited[source] = true;
@@ -53,7 +53,7 @@ public class NetworkFlow {
             for (int v = sink; v != source; v = parent[v]) {
                 int u = parent[v];
                 flow[u][v] += pathFlow;
-                flow[v][u] -= pathFlow; // 역방향 업데이트
+                flow[v][u] -= pathFlow; 
             }
 
             maxFlow += pathFlow;
