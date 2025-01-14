@@ -74,7 +74,7 @@ public class NetworkFlow {
             {0, 0, 0, 0, 0, 0, 0}  // G
         };
 
-        int source = 0; // A 노드
+        int source = 0; // A 노드/
         int sink = 6;   // G 노드
 
         int maxFlow = edmondsKarp(capacity, source, sink);
@@ -82,3 +82,4 @@ public class NetworkFlow {
     }
 }
 
+//hi
